@@ -8,32 +8,37 @@
 #pragma once
 
 // (name, java_name)
-#define WELL_KNOWN_TYPES                                               \
-  FOR_EACH(_void, "V")                                                 \
-  FOR_EACH(_byte, "B")                                                 \
-  FOR_EACH(_char, "C")                                                 \
-  FOR_EACH(_short, "S")                                                \
-  FOR_EACH(_int, "I")                                                  \
-  FOR_EACH(_long, "J")                                                 \
-  FOR_EACH(_boolean, "Z")                                              \
-  FOR_EACH(_float, "F")                                                \
-  FOR_EACH(_double, "D")                                               \
-  FOR_EACH(java_lang_String, "Ljava/lang/String;")                     \
-  FOR_EACH(java_lang_Class, "Ljava/lang/Class;")                       \
-  FOR_EACH(java_lang_Enum, "Ljava/lang/Enum;")                         \
-  FOR_EACH(java_lang_Object, "Ljava/lang/Object;")                     \
-  FOR_EACH(java_lang_Void, "Ljava/lang/Void;")                         \
-  FOR_EACH(java_lang_Throwable, "Ljava/lang/Throwable;")               \
-  FOR_EACH(java_lang_Boolean, "Ljava/lang/Boolean;")                   \
-  FOR_EACH(java_lang_Byte, "Ljava/lang/Byte;")                         \
-  FOR_EACH(java_lang_Short, "Ljava/lang/Short;")                       \
-  FOR_EACH(java_lang_Character, "Ljava/lang/Character;")               \
-  FOR_EACH(java_lang_Integer, "Ljava/lang/Integer;")                   \
-  FOR_EACH(java_lang_Long, "Ljava/lang/Long;")                         \
-  FOR_EACH(java_lang_Float, "Ljava/lang/Float;")                       \
-  FOR_EACH(java_lang_Double, "Ljava/lang/Double;")                     \
-  FOR_EACH(java_lang_RuntimeException, "Ljava/lang/RuntimeException;") \
-  FOR_EACH(dalvik_annotation_Signature, "Ldalvik/annotation/Signature;")
+#define WELL_KNOWN_TYPES                                                 \
+  FOR_EACH(_void, "V")                                                   \
+  FOR_EACH(_byte, "B")                                                   \
+  FOR_EACH(_char, "C")                                                   \
+  FOR_EACH(_short, "S")                                                  \
+  FOR_EACH(_int, "I")                                                    \
+  FOR_EACH(_long, "J")                                                   \
+  FOR_EACH(_boolean, "Z")                                                \
+  FOR_EACH(_float, "F")                                                  \
+  FOR_EACH(_double, "D")                                                 \
+  FOR_EACH(java_lang_String, "Ljava/lang/String;")                       \
+  FOR_EACH(java_lang_Class, "Ljava/lang/Class;")                         \
+  FOR_EACH(java_lang_Enum, "Ljava/lang/Enum;")                           \
+  FOR_EACH(java_lang_Object, "Ljava/lang/Object;")                       \
+  FOR_EACH(java_lang_Void, "Ljava/lang/Void;")                           \
+  FOR_EACH(java_lang_Throwable, "Ljava/lang/Throwable;")                 \
+  FOR_EACH(java_lang_Boolean, "Ljava/lang/Boolean;")                     \
+  FOR_EACH(java_lang_Byte, "Ljava/lang/Byte;")                           \
+  FOR_EACH(java_lang_Short, "Ljava/lang/Short;")                         \
+  FOR_EACH(java_lang_Character, "Ljava/lang/Character;")                 \
+  FOR_EACH(java_lang_Integer, "Ljava/lang/Integer;")                     \
+  FOR_EACH(java_lang_Long, "Ljava/lang/Long;")                           \
+  FOR_EACH(java_lang_Float, "Ljava/lang/Float;")                         \
+  FOR_EACH(java_lang_Double, "Ljava/lang/Double;")                       \
+  FOR_EACH(java_lang_RuntimeException, "Ljava/lang/RuntimeException;")   \
+  FOR_EACH(dalvik_annotation_Signature, "Ldalvik/annotation/Signature;") \
+  FOR_EACH(dalvik_annotation_MemberClasses,                              \
+           "Ldalvik/annotation/"                                         \
+           "MemberClasses;")                                             \
+  FOR_EACH(dalvik_annotation_optimization_NeverInline,                   \
+           "Ldalvik/annotation/optimization/NeverInline;")
 
 #define PRIMITIVE_PSEUDO_TYPE_FIELDS                                       \
   FOR_EACH(Void_TYPE, "Ljava/lang/Void;.TYPE:Ljava/lang/Class;")           \
@@ -59,7 +64,8 @@
            "Ljava/lang/Integer;.valueOf:(I)Ljava/lang/Integer;")              \
   FOR_EACH(java_lang_Integer_intValue, "Ljava/lang/Integer;.intValue:()I")    \
   FOR_EACH(java_lang_Throwable_fillInStackTrace,                              \
-           "Ljava/lang/Throwable;.fillInStackTrace:()Ljava/lang/Throwable;")  \
+           "Ljava/lang/Throwable;.fillInStackTrace:()Ljava/lang/"             \
+           "Throwable;")                                                      \
   FOR_EACH(java_lang_RuntimeException_init_String,                            \
            "Ljava/lang/RuntimeException;.<init>:(Ljava/lang/String;)V")       \
   FOR_EACH(java_lang_String_equals,                                           \
@@ -68,4 +74,5 @@
   FOR_EACH(java_lang_Objects_clone,                                           \
            "[Ljava/lang/Object;.clone:()Ljava/lang/Object;")                  \
   FOR_EACH(java_lang_Class_forName,                                           \
-           "Ljava/lang/Class;.forName:(Ljava/lang/String;)Ljava/lang/Class;")
+           "Ljava/lang/Class;.forName:(Ljava/lang/String;)Ljava/"             \
+           "lang/Class;")
